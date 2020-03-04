@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-template-areas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .grid-template-areas-1 {
+            grid-template-areas: 
+            "logo nav nav"
+            "sidenav content advert"
+            "sidenav footer footer"
+            ;
+        }
+
+        .grid-template-areas-2 {
+            grid-template-areas: 
+            "logo nav nav"
+            "sidenav content advert"
+            "sidenav footer footer"
+            ;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        .logo {
+            grid-area: logo;
+        }
+
+        .nav {
+            grid-area: nav;
+        }
+
+        .advert {
+            grid-area: advert;
+        }
+
+        .content {
+            grid-area: content;
+        }
+
+        .sidenav {
+            grid-area: sidenav;
+        }
+
+        .grid-template-areas-2 {
+            grid-template-areas:
+                "logo logo nav"
+                "sidenav content content"
+                "sidenav advert footer"
+            ;
+        }
+
+        @media( max-width: 500px ){
+            .grid-template-areas-2 {
+                grid-template-areas:
+                    "logo logo logo"
+                    "sidenav sidenav sidenav"
+                    "nav nav nav"
+                    "content content content"
+                    "advert footer footer"
+                ;
+            }
+        }
+
+        .grid-template-areas-3 {
+            grid-template-columns: 30% auto 15%;
+            grid-template-rows: 50px 150px auto;
+            grid-template-areas: 
+                "logo nav nav"
+                "sidenav content advert"
+                "sidenav footer footer"
+            ;
+        }
+
+        .grid-template-areas-4 {
+            grid-template-areas:
+                "logo     content  nav"
+                "....     content  advert"
+                "sidenav  footer   ....."
+            ;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>grid-template-areas</h1>
+
+        <section class="grid grid-template-areas-1">
+            <article class="item logo">logo</article>
+            <article class="item nav">nav</article>
+            <article class="item content">content</article>
+            <article class="item sidenav">sidenav</article>
+            <article class="item advert">advert</article>
+            <article class="item footer">footer</article>
+        </section>
+    </div>
+
+    <div class="wrapper">
+        <h1>grid-template-areas (mobile)</h1>
+        
+        <section class="grid grid-template-areas-2">
+            <article class="item logo">logo</article>
+            <article class="item nav">nav</article>
+            <article class="item content">content</article>
+            <article class="item sidenav">sidenav</article>
+            <article class="item advert">advert</article>
+            <article class="item footer">footer</article>
+        </section>
+    </div>
+
+    <div class="wrapper">
+        <h1>grid-template-areas (column e row)</h1>
+        
+        <section class="grid grid-template-areas-3">
+            <article class="item logo">logo</article>
+            <article class="item nav">nav</article>
+            <article class="item content">content</article>
+            <article class="item sidenav">sidenav</article>
+            <article class="item advert">advert</article>
+            <article class="item footer">footer</article>
+        </section>
+    </div>
+
+    <div class="wrapper">
+        <h1>grid-template-areas (com áreas vazias)</h1>
+        
+        <section class="grid grid-template-areas-4">
+            <article class="item logo">logo</article>
+            <article class="item nav">nav</article>
+            <article class="item content">content</article>
+            <article class="item sidenav">sidenav</article>
+            <article class="item advert">advert</article>
+            <article class="item footer">footer</article>
+        </section>
+    </div>
+
+</body>
+</html>
